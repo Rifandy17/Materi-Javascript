@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 1</title>
+</head>
+<body>
+
+</body>
+<script>
+    document.write("<h2>Tugas Javascript</h2>");
+
+    var username = document.createElement("input");
+    username.setAttribute("type", "text");
+    username.setAttribute("placeholder", "Username");
+    document.body.appendChild(username);
+
+    document.write("<br><br>")
+
+    var password = document.createElement("input");
+    password.setAttribute("type", "password");
+    password.setAttribute("placeholder", "Password");
+    document.body.appendChild(password);
+
+    document.write("<br><br>")
+
+    var btn = document.createElement("button");
+    btn.innerHTML = "Login";
+    btn.type = "submit";
+    btn.addEventListener("click", function() {
+        alert("Berhasil Melakukan Login");
+    });
+    document.body.appendChild(btn);
+</script>
+</html>
