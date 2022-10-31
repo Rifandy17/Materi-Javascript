@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNER HTML</title>
+</head>
+
+<body>
+    <p id="sebelum">sebelum</p>
+    <p id="setelah">setelah</p>
+</body>
+<script>
+    let sebelum = document.getElementById("sebelum")
+    let setelah = document.getElementById("setelah")
+
+    let alamat = "Plosogeneng Kecamatan Jombang, Kabupaten Jombang, Jawa Timur"
+    sebelum.innerText = "Sebelum Diubah : " + alamat
+
+
+    // Mengambil Index dari kata "Jombang" yang ke 2
+    let ambilIndex = alamat.indexOf("Jombang", 30) // 41
+
+    // Mengambil kalimat dimulai dari kata "Jombang" yang ke 2
+    let ambilKalimat = alamat.slice(ambilIndex, alamat.length) // Jombang, Jawa Timur
+
+    // Mengubah kalimat dari "Jombang" ke "Sidoarjo" pada variabel ambilKalimat
+    let ubahKalimat = ambilKalimat.replace("Jombang", "Sidoarjo") // Sidoarjo, Jawa Timur
+
+    // Mengambil kalimat dimulai dari index 0 sampai ke index 41 (ambilIndex)
+    let ambilKalimat2 = alamat.slice(0, ambilIndex) // Plosogeneng Kecamatan Jombang, Kabupaten 
+
+    // Menggabungkan value dari ambilKalimat2 dan ubahKalimat
+    alamat = ambilKalimat2.concat(ubahKalimat) // Plosogeneng Kecamatan Jombang, Kabupaten Sidoarjo, Jawa Timur
+
+    setelah.innerText = "Setelah Diubah : " + alamat
+</script>
+
+</html>

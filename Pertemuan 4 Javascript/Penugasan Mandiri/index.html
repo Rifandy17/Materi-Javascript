@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 4</title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-left: 2rem;
+            padding-right: 30rem;
+        }
+        fieldset {
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend><h2>Tugas Mandiri 4</h2></legend>
+            <h3>BEFORE</h3>
+            <p id="sebelum">Sebelum</p>
+            <h3>AFTER UPPERCASE</h3>
+            <p id="setelah">Setelah</p>
+            <br>
+            <h3>BEFORE</h3>
+            <p id="sebelum2">Sebelum</p>
+            <h3>AFTER LOWERCASE</h3>
+            <p id="setelah2">Setelah</p>
+            <br>
+            <h3>BEFORE</h3>
+            <p id="sebelum3">Sebelum</p>
+            <h3>AFTER CHANGING</h3>
+            <p id="setelah3">Setelah</p>
+            <br>
+            <h3>Length of Text Variable</h3>
+            <p id="text">Length</p>
+</fieldset>
+</body>
+<script>
+    let sebelum = document.getElementById("sebelum")
+    let setelah = document.getElementById("setelah")
+
+    let teks = "Merah Putih"
+    sebelum.innerHTML = teks
+    setelah.innerHTML = teks.toUpperCase()
+
+    let teks2 = "Merah Putih"
+    sebelum2.innerHTML = teks2
+    setelah2.innerHTML = teks2.toLowerCase()
+
+    let teks3 = "Merah Putih"
+    sebelum3.innerHTML = teks3
+    setelah3.innerHTML = teks3.replace("Putih", "Muda")
+
+    let text = document.getElementById("text")
+    let teks4 = "Merah Muda"
+    text.innerHTML = teks4.length
+    console.log(teks4.length)
+</script>
+</html>
