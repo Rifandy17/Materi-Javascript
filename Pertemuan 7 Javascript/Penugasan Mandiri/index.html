@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 7 </title>
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding-right: 30rem;
+        }
+        fieldset {
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend><h2>Tugas Mandiri 7</h2></legend>
+            <h3>BEFORE</h3>
+                <p id="sebelum">Sebelum</p>
+            <h3>AFTER ADDED</h3>
+                <p id="setelah">Setelah</p>
+            <br>
+            <h3>BEFORE</h3>
+                <p id="sebelum2">Sebelum</p>
+            <h3>AFTER CHANGING</h3>
+                <p id="setelah2">Setelah</p>
+            <br>
+            <h3>BEFORE</h3>
+                <p id="sebelum3">Sebelum</p>
+            <h3>AFTER DELETION</h3>
+                <p id="setelah3">Setelah</p>
+            <br>
+</fieldset>
+</body>
+<script>
+
+    // Jawaban Soal Nomor 1 dan 2
+    const getArray = () => {
+        let sebelum = document.getElementById("sebelum")
+        let setelah = document.getElementById("setelah")
+        let hewan = [
+            "Gajah",
+            "Ikan",
+            "Harimau"]
+
+        sebelum.innerHTML = hewan
+        hewan.push("Gagak")
+        setelah.innerHTML = hewan
+
+        for (h of hewan) {
+            console.log(hewan)
+        }
+    }
+    getArray()
+
+    // Jawaban Soal Nomor 2
+    const setArray = () => {
+        let sebelum2 = document.getElementById("sebelum2")
+        let setelah2 = document.getElementById("setelah2")
+        let hewan2 = [
+            "Gajah",
+            "Ikan",
+            "Harimau",
+            "Gagak"
+        ]
+
+        sebelum2.innerHTML = hewan2
+        hewan2[2] = "Kucing"
+        setelah2.innerHTML = hewan2
+        
+        for (h of hewan2) {
+            console.log(hewan2[2])
+        }
+    }
+    setArray()
+
+    // Jawaban Soal Nomor 3
+    const delArray = () => {
+        let sebelum3 = document.getElementById("sebelum3")
+        let setelah3 = document.getElementById("setelah3")
+        let hewan3 = [
+            "Gajah",
+            "Ikan",
+            "Kucing",
+            "Gagak"
+        ]
+
+        sebelum3.innerHTML = hewan3
+        hewan3.shift([0])
+        setelah3.innerHTML = hewan3
+
+        for (h of hewan3) {
+            console.log([0])
+        }
+    }
+    delArray()
+
+    
+</script>
+</html>
