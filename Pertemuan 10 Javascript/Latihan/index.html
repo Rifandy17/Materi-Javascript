@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORK WITH DOCUMENT</title>
+    <style>
+        #box {
+            margin: 20px;
+            width: fit-content;
+            padding: 50px;
+            background-color: rgb(255, 0, 0);
+        }
+        #warna {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+
+    <select name="warna" id="warna" onchange="ubahwarna(this)">
+        <option value="blue" id="blue">Biru</option>
+        <option value="black" id="black">Hitam</option>
+        <option value="yellow" id="yellow">Kuning</option>
+        <option value="green" id="green">Hijau</option>
+    </select>
+</body>
+<script>
+    // let box = document.getElementById("box")
+
+    // box.style.backgroundColor = "blue"
+
+    // // membuat function sederhana
+    // const ubahwarna = () => {
+    //     let warna = document.getElementById("warna")
+    //     let box = document.getElementById("box")
+    //     let blue = document.getElementById("blue")
+    //     let black = document.getElementById("black")
+    //     let yellow = document.getElementById("yellow")
+    //     let green = document.getElementById("green")
+
+    //     // membuat percabangan kondisi
+    //     if (event.target.value == "blue") {
+    //         box.style.backgroundColor = "blue"
+    //     }
+
+    //     else if (event.target.value == "black") {
+    //         box.style.backgroundColor = "black"
+    //     }
+
+    //     else if (event.target.value == "yellow") {
+    //         box.style.backgroundColor = "yellow"
+    //     }
+
+    //     else if(event.target.value == "green") {  
+    //         box.style.backgroundColor = "green"
+    //     }
+    // }
+
+    // membuat function ubahwarna
+    const ubahwarna = () => {
+
+        // melakukan inisialisasi variabel
+        let warna = document.getElementById("warna")
+        let box = document.getElementById("box")
+        let value = warna.value
+
+        // membuat percabangan kondisi
+        if (value == "blue") {
+            box.style.backgroundColor = "blue"
+        }
+        else if (value == "black") {
+            box.style.backgroundColor = "black"
+        }
+        else if (value == "yellow") {
+            box.style.backgroundColor = "yellow"
+        }
+        else if (value == "green") {
+            box.style.backgroundColor = "green"
+        }
+    }
+</script>
+</html>

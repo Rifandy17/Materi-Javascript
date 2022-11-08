@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplikasi Konversi Nilai Suhu</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style>
+		h1 {
+			text-align: center;
+			margin-top: 3rem;
+		}
+		#suhuasal {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+    <h1>Aplikasi Konversi Suhu</h1><br>
+	
+	<table border="1" class="border border-primary" align="center" width="700" height="250">
+		<tr>
+		<td id="suhuasal"> Nilai Suhu Asal<br><br>
+			<div class="container">
+			<form id="pilihan3" name="form3">
+	
+				<select id="pilih3" class="form-control">
+					  <option value="celcius">Celcius</option>
+					  <option value="fahrenheit">Fahrenheit</option>
+					  <option value="kelvin">Kelvin</option>
+				</select>
+	
+			</form>
+	
+			<br><input id="inputan" class="form-control" type="number" placeholder="Masukkan Nilai"><br>
+	
+				<input type="button" class="btn btn-primary" onclick="menghitung()" value="Hitung">
+	
+		</td>
+	
+		<td align="center"> Nilai Suhu Tujuan<br><br>
+			<div class="container">
+			<form id="pilihan4" name="form4">
+				<select id="pilih4" class="form-control">
+					  <option value="celcius">Celcius</option>
+					  <option value="fahrenheit">Fahrenheit</option>
+					  <option value="kelvin">Kelvin</option>
+				</select>
+			</form>
+			<br>
+				  Hasilnya : <span id="tampil">0</span>
+			</form>
+		</td>
+	
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+
+		const menghitung = () => {
+			
+			var a = document.getElementById('pilihan3').pilih3.value;
+			var b = document.getElementById('pilihan4').pilih4.value;
+			var masukan = parseInt(inputan.value);
+	
+			if (a == "celcius" && b == "celcius" || a == "fahrenheit" && b == "fahrenheit" || a == "kelvin" && b == "kelvin") {
+	
+				var hasil = masukan ;
+	
+				document.getElementById("tampil").innerHTML = hasil;
+	
+			}
+			else if (a == "celcius" && b == "fahrenheit") {
+	
+				hasil = (masukan * 9 / 5) + 32;
+	
+				document.getElementById("tampil").innerHTML = hasil;
+			}
+			else if (a == "celcius" && b == "kelvin") {
+	
+				hasil = masukan + 273.15;
+	
+				document.getElementById("tampil").innerHTML = hasil;
+			}
+			else if (a == "fahrenheit" && b == "celcius") {
+				hasil = (masukan - 32) * 5 / 9;
+	
+				document.getElementById("tampil").innerHTML = hasil;
+			}
+			else if (a == "fahrenheit" && b == "kelvin") {
+				hasil = (masukan - 32) * 5 / 9 + 273.15; 
+	
+				document.getElementById("tampil").innerHTML = hasil;
+			}
+			else if (a == "kelvin" && b == "celcius") {
+				hasil = masukan - 273.15;
+	
+				document.getElementById("tampil").innerHTML = hasil;
+			}
+			else if (a == "kelvin" && b == "fahrenheit") {
+				hasil = (masukan - 273.15) * 9 / 5 + 32 ;
+	
+				document.getElementById("tampil").innerHTML = hasil;
+			}
+	
+		}
+	</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
