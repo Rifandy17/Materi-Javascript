@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Event Change</title>
+    <style>
+        fieldset {
+            margin-top: 20px;
+            width: max-content;
+        }
+        legend {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #info {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        label {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #box {
+            margin: 20px;
+            padding: 50px ;
+            height: 40px;
+            width: auto;
+        }
+        #txt {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+        #bg {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend><h3>Contoh Event Change</h3></legend>
+    <table align="center">
+        <tr>
+            <td colspan="2">
+                <div align="center" id="box">
+                    <div id="text" align="center">
+                        <h3 align="center" id="txt">Text</h3>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="float:left;" align="center">
+                 <p align="center" id="bg">Background</p>
+                 <select id="slt" onchange="change()">
+                    <option value="black">Hitam</option>
+                    <option value="darkblue">Biru Gelap</option>
+                    <option value="blue">Biru</option>
+                    <option value="yellow">Kuning</option>
+                    <option value="aqua">Aqua</option>
+                    <option value="red">Merah</option>
+                    <option value="green">Hijau</option>
+                    <option value="aquamarine">Aquamarine</option>
+                    <option value="turquoise">Turquoise</option>
+                    <option value="grey">Grey</option>
+                </select>
+            </div>
+            </td>
+            <td>
+                <div style="float: right;" align="center">
+                <p align="center" id="txt">Text</p>
+                <select id="slt1" onchange="change()">
+                    <option value="black">Hitam</option>
+                    <option value="darkblue">Biru Gelap</option>
+                    <option value="blue">Biru</option>
+                    <option value="yellow">Kuning</option>
+                    <option value="aqua">Aqua</option>
+                    <option value="red">Merah</option>
+                    <option value="green">Hijau</option>
+                    <option value="aquamarine">Aquamarine</option>
+                    <option value="turquoise">Turquoise</option>
+                    <option value="grey">Grey</option>
+                    </select>
+                </div>
+            </td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+<script>
+    var slt = document.getElementById('slt');
+	var box = document.getElementById('box');
+	var text = document.getElementById('text');
+	const change = () => {
+		box.style.background = slt.value;
+		text.style.color = slt1.value;
+	}
+</script>
+</html>

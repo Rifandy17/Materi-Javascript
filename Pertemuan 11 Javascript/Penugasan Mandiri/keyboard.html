@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Keyboard Event</title>
+    <style>
+        h4 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        fieldset {
+            margin-top: 20px;
+            width: max-content;
+            border-radius: 10px;
+        }
+        legend {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend><h3>Contoh Keyboard Event</h3></legend>
+        <h4 id="keydown"></h4>
+        <h4 id="pressed"></h4>
+        <h4 id="keyup"></h4>
+    </fieldset>
+</body>
+<script>
+let keydown = document.getElementById("keydown");
+    let pressed = document.getElementById("pressed");
+    let keyup = document.getElementById("keyup");
+
+    document.addEventListener("keydown", (event) => {
+      keydown.innerText = `Menekan: ${event.key}`;
+    });
+    
+    document.addEventListener("keypress", (event) => {
+      pressed.innerText = `Menahan: ${event.key}`;
+    });
+
+    document.addEventListener("keyup", (event) => {
+      keyup.innerText = `Melepas: ${event.key}`;
+    });
+</script>
+</html>
