@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM JAVASCRIPT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <form class="form m-auto p-5 w-50" name="login">
+        <input type="text"  class="form-control m-2" name="nama" placeholder="Masukkan Username">
+        <select  class="form-control m-2" name="agama">
+            <option value="islam">Islam</option>
+            <option value="kristen">Kristen</option>
+            <option value="hindu">Hindu</option>
+            <option value="buddha">Buddha</option>
+        </select>
+        <button id="simpan" class="btn btn-primary m-2">Simpan</button>
+    </form>
+    <p id="hasil" class="text text-center"></p>
+</body>
+<script>
+    let btnSimpan = document.getElementById("simpan")
+    let hasil = document.getElementById("hasil")
+
+    btnSimpan.onclick = function (item) {
+        item.preventDefault()
+
+        let login = document.forms.login
+
+        let nama = login.elements.nama
+        let agama = login.elements.agama
+
+        // let selectAgama = agama.options[agama.selectedIndex].text
+
+        // alert(selectAgama)
+        let valueNama = nama.value // inputan
+        let valueAgama = agama.value // islam
+        let selectAgama = agama.options[agama.selectedIndex].text //Islam
+
+        hasil.innerHTML = "Hi, " + valueNama + ", Kamu " + valueAgama + "kan"
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</html>

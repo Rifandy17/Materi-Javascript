@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 12</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center p-4">Form Pendaftaran Mahasantri</h1>
+        <form class="form m-auto p-5 w-50" name=formulir onsubmit=pendaftaran()>
+            <label>Nama Lengkap</label>
+            <input class="form-control" type="text" name="kolom1" required/>
+            <label>Tempat, Tanggal Lahir</label>
+            <input class="form-control" type="text" name="kolom2" required/>
+            <label>Jenis Kelamin</label>
+            <select class="form-control" name="jk">
+                <option value="laki">Laki-Laki</option>
+                <option value="perempuan">Perempuan</option>
+            </select>
+            <label>Alamat</label>
+            <input class="form-control" type="text" name="kolom3" required />
+            <label>Jurusan</label>
+            <select class="form-select" name="jurusan">
+                <option value="ppl">1. Pengembangan Perangkat Lunak</option>
+                <option value="dm">2. Digital Marketing</option>
+                <option value="psj">3. Pengelolaan Sistem dan Jaringan</option>
+            </select>
+            <label>No HP/WA</label>
+            <input class="form-control" type="text" name="kolom4" required/>
+            <label>Email</label>
+            <input class="form-control" type="text" name="kolom5" required/>
+            <label>Asal Sekolah</label>
+            <input class="form-control" type="text" name="kolom6" required/>
+            <label>Nama Ayah</label>
+            <input class="form-control" type="text" name="kolom7" required/>
+            <label>Pekerjaan Ayah</label>
+            <input class="form-control" type="text" name="kolom8" required/>
+            <label>Penghasilan Ayah</label>
+            <input class="form-control" type="text" name="kolom9" required/>
+            <label>No HP/WA Ayah</label>
+            <input class="form-control" type="text" name="kolom10" required/>
+            <label>Nama Ibu</label>
+            <input class="form-control" type="text" name="kolom11" required/>
+            <label>Pekerjaan Ibu</label>
+            <input class="form-control" type="text" name="kolom12" required/>
+            <label>Penghasilan Ibu</label>
+            <input class="form-control" type="text" name="kolom13" required/>
+            <label>No HP/WA Ibu</label>
+            <input class="form-control" type="text" name="kolom14" required/>
+            <label>Alamat Lengkap Orang Tua</label>
+            <input class="form-control" type="text" name="kolom15" required/>
+            <label>Tambahkan File</label>
+            <input class="form-control" type="file" name="kolom16" required>
+            <button class="btn btn-success m-2" type="submit" name="Kirim" value="Kirim">Simpan</button>
+            <button class="btn btn-danger" type="reset" name="Hapus" value="Hapus">Hapus</button>
+        </form>
+</body>
+<script>
+    function pendaftaran()
+        {
+            var formulir = document.forms["formulir"];
+            var kolom1 = formulir.elements["kolom1"].value;
+            var kolom2 = formulir.elements["kolom2"].value;
+            var kolom3 = formulir.elements["kolom3"].value;
+            var kolom4 = formulir.elements["kolom4"].value;
+            var kolom5 = formulir.elements["kolom5"].value;
+            var kolom6 = formulir.elements["kolom6"].value;
+            var kolom7 = formulir.elements["kolom7"].value;
+            var kolom8 = formulir.elements["kolom8"].value;
+            var kolom9 = formulir.elements["kolom9"].value;
+            var kolom10 = formulir.elements["kolom10"].value;
+            var kolom11 = formulir.elements["kolom11"].value;
+            var kolom12 = formulir.elements["kolom12"].value;
+            var kolom13 = formulir.elements["kolom13"].value;
+            var kolom14 = formulir.elements["kolom14"].value;
+            var kolom15 = formulir.elements["kolom15"].value;
+            var kolom16 = formulir.elements["kolom16"].value;
+            
+
+            if (kolom1 == "")
+                {
+                    alert("Anda belum mengisi kolom Nama");
+                }
+            else if (kolom2 == "")
+                {
+                    alert("Anda belum mengisi kolom Tempat, Tanggal Lahir");
+                }
+            else if (kolom3 == "")
+                {
+                    alert("Anda belum mengisi kolom Alamat");
+                }
+            else if (kolom4 == "")
+                {
+                    alert("Anda belum mengisi kolom No Hp/Wa");
+                }
+            else if (kolom5 == "" || formulir.kolom5.value.indexOf('@',0,'.')==-1)
+                {
+                    alert("Anda belum mengisi kolom Email");
+                }
+            else if (kolom6 == "")
+                {
+                    alert("Anda belum mengisi kolom Asal Sekolah");
+                }
+            else if (kolom7 == "")
+                {
+                    alert("Anda belum mengisi kolom Nama Ayah");
+                }
+            else if (kolom8 == "")
+                {
+                    alert("Anda belum mengisi kolom Pekerjaan Ayah");
+                }
+            else if (kolom9 == "")
+                {
+                    alert("Anda belum mengisi kolom Penghasilan Ayah");
+                }
+            else if (kolom10 == "")
+                {
+                    alert("Anda belum mengisi kolom No Hp/Wa Ayah");
+                }
+            else if (kolom11 == "")
+                {
+                    alert("Anda belum mengisi kolom Nama Ibu");
+                }
+            else if (kolom12 == "")
+                {
+                    alert("Anda belum mengisi kolom Pekerjaan Ibu");
+                }
+            else if (kolom13 == "")
+                {
+                    alert("Anda belum mengisi kolom Penghasilan Ibu");
+                }
+            else if (kolom14 == "")
+                {
+                    alert("Anda belum mengisi kolom No Hp/Wa Ibu");
+                }
+            else if (kolom15 == "")
+                {
+                    alert("Anda belum mengisi kolom Alamat Orang Tua");
+                }
+            else if (kolom16 == "")
+                {
+                    alert("Anda belum mengisi kolom File");
+                }
+            else
+                {
+                    confirm("Data Diinput");                
+                }        
+        }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</html>
