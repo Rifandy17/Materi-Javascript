@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnUnload Event</title>
+</head>
+
+<body>
+    <div>Jendela Baru</div>
+</body>
+<script>
+    onload = () => {
+
+    window.opener.document.write('<h2>Jendela Baru Diload</h2>');
+
+    onunload = () => {
+
+    window.opener.document.write('<h2>Jendela Baru Ditutup</h2>');
+
+}       }
+</script>
+</html>
